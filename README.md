@@ -96,7 +96,7 @@ Notice how:
 
 ### Manual Installation
 
-1. Download the latest release from [Releases](https://github.com/your-repo/logseq-copy-as-markdown/releases)
+1. Download the latest release from [Releases](https://github.com/MathiasCodes/logseq-copy-as-markdown/releases)
 2. Extract the ZIP file
 3. Open Logseq → `Settings` → `Advanced` → Enable `Developer mode` and `Plugin system`
 4. Go to `Plugins` (Shortcut: `Esc t p`) → `Load unpacked plugin`
