@@ -1,6 +1,6 @@
 {
   "name": "logseq-copy-as-markdown",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Copy Logseq blocks as GitHub Markdown or AsciiDoc format",
   "main": "dist/index.html",
   "scripts": {
@@ -16,7 +16,14 @@
     "generate-docs": "tsx generate-test-docs.ts",
     "preinstall": "npx only-allow pnpm"
   },
-  "keywords": ["logseq", "plugin", "markdown", "asciidoc", "copy", "clipboard"],
+  "keywords": [
+    "logseq",
+    "plugin",
+    "markdown",
+    "asciidoc",
+    "copy",
+    "clipboard"
+  ],
   "author": "Logseq Copy as Markdown Plugin",
   "license": "MIT",
   "repository": {
