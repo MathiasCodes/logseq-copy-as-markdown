@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build && pnpm run postbuild",
-    "postbuild": "cpy package.json dist && cpy logo.svg dist",
+    "postbuild": "node prepare-package.js && cpy logo.svg dist",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:unit": "vitest run --exclude src/integration.test.ts",
