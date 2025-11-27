@@ -1,0 +1,275 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Integration Tests > End-to-End Conversion > should convert test document to AsciiDoc format 1`] = `
+"* Root
+
+
+[discrete]
+== Feature Test Document
+
+* This document demonstrates all features supported by the Logseq Copy as Markdown/AsciiDoc plugin.
+
+
+[discrete]
+=== Block References and Links
+
+* This is a reference to *Another Page*
+* Multiple references: *Page One* and *Page Two*
+* Nested reference: See *Documentation/Setup Guide*
+
+
+[discrete]
+=== Tags
+
+* This block has a *important* tag
+* Multiple tags: *urgent* *review* *documentation*
+* Tags with special characters: *my-tag* *under_score*
+
+
+[discrete]
+=== Task Markers
+
+* [ ] This is a todo item
+* [x] This task is completed
+* [ ] 🔄 Currently working on this
+* [ ] ⏳ This is for later
+* [ ] 🔥 High priority task
+
+
+[discrete]
+=== Highlights
+
+* This is #very important text# that should be highlighted!
+* Multiple highlights: #First highlight# and #second highlight# in one line
+* Combined with other formatting: #Important# *urgent* task
+
+
+[discrete]
+=== Bold Text
+
+* This is *bold text* for emphasis
+* *Multiple* *bold* *words*
+* Combined: *Bold* and #highlighted# text
+
+
+[discrete]
+=== Code Blocks
+
+* Inline code example \`run command\`.
+* Code block with language:
+
+[source,javascript]
+----
+function hello() {
+console.log("Hello World");
+}
+----
+* Code block without language:
+
+[source]
+----
+Plain text code
+Multiple lines
+----
+
+
+[discrete]
+=== Queries
+
+* Simple query example:
+** Query: (todo TODO DOING) +
+collapsed:: true
+* Advanced query:
+** Query: (and [[Project]] (task TODO))
+
+
+[discrete]
+=== Nested Blocks
+
+* Parent block with *parent* tag
+** First child block
+*** Nested child with *Reference*
+**** Deep nesting level 3
+***** Even deeper level 4
+** Second child with #highlight#
+*** [ ] Task in nested structure
+
+
+[discrete]
+=== Complex Combinations
+
+* [ ] Review *Documentation* with *urgent* tag and #important# notes
+* [x] Completed task with *bold text* and *Page Reference*
+* This combines #highlighting#, *bold*, *tags*, and *links* all together
+
+
+[discrete]
+=== Properties Example
+id:: 67460e8e-3f21-4a8e-9876-1234567890ab
+tags:: test, example, features
+created-at:: 2024-11-26
+
+* This block has properties attached
+
+
+[discrete]
+=== Edge Cases
+
+* Empty nested block: +
+-
+* Block with only a tag:
+** *standalone*
+* Block with only a link:
+** *OnlyLink*
+* Block with only highlight:
+** #OnlyHighlight#
+
+
+[discrete]
+=== Real World Example
+
+* [ ] Implement new feature for *User Authentication*
+** [ ] 🔄 Research authentication methods *security*
+*** Review *OAuth 2.0* documentation
+*** Check #best practices# for token storage
+** [ ] ⏳ Write unit tests
+
+[source,typescript]
+----
+describe('Authentication', () => {
+it('should validate tokens', () => {
+// test code
+});
+});
+----
+** [ ] Update *API Documentation*
+* [x] Initial setup completed *successfully*
+
+
+[discrete]
+=== Multiline Text
+
+* This is a block with multiple lines of text. +
+Each line continues the same block. +
+This tests how multiline content is handled. +
+The converter should preserve all lines properly.
+
+
+[discrete]
+=== Quotes
+
+* This block contains a quote: 
+
+"The best way to predict the future is to invent it."
+-- Alan Kay
+* Block with quote and text before and after: Some introduction text 
+
+"Innovation distinguishes between a leader and a follower."
+-- Steve Jobs
+
+and some conclusion.
+* "The only way to do great work is to love what you do."
+-- Steve Jobs"
+`;
+
+exports[`Integration Tests > End-to-End Conversion > should convert test document to HTML format 1`] = `"<ul><li>Root<ul><li><h1>Feature Test Document</h1></li><li>This document demonstrates all features supported by the Logseq Copy as Markdown/AsciiDoc plugin.</li><li><h2>Block References and Links</h2><ul><li>This is a reference to <strong>Another Page</strong></li><li>Multiple references: <strong>Page One</strong> and <strong>Page Two</strong></li><li>Nested reference: See <strong>Documentation/Setup Guide</strong></li></ul></li><li><h2>Tags</h2><ul><li>This block has a <strong>important</strong> tag</li><li>Multiple tags: <strong>urgent</strong> <strong>review</strong> <strong>documentation</strong></li><li>Tags with special characters: <strong>my-tag</strong> <strong>under_score</strong></li></ul></li><li><h2>Task Markers</h2><ul><li><input type="checkbox" disabled /> This is a todo item</li><li><input type="checkbox" checked disabled /> This task is completed</li><li><input type="checkbox" disabled /> 🔄Currently working on this</li><li><input type="checkbox" disabled /> ⏳This is for later</li><li><input type="checkbox" disabled /> 🔥High priority task</li></ul></li><li><h2>Highlights</h2><ul><li>This is <mark>very important text</mark> that should be highlighted!</li><li>Multiple highlights: <mark>First highlight</mark> and <mark>second highlight</mark> in one line</li><li>Combined with other formatting: <mark>Important</mark> <strong>urgent</strong> task</li></ul></li><li><h2>Bold Text</h2><ul><li>This is <strong>bold text</strong> for emphasis</li><li><strong>Multiple</strong> <strong>bold</strong> <strong>words</strong></li><li>Combined: <strong>Bold</strong> and <mark>highlighted</mark> text</li></ul></li><li><h2>Code Blocks</h2><ul><li>Inline code example \`run command\`.</li><li>Code block with language:<ul><li><pre><code class="language-javascript">function hello() {<br>console.log(&quot;Hello World&quot;);<br>}<br></code></pre></li></ul></li><li>Code block without language:<ul><li><pre><code>Plain text code<br>Multiple lines<br></code></pre></li></ul></li></ul></li><li><h2>Queries</h2><ul><li>Simple query example:<ul><li><em>Query: (todo TODO DOING)</em><br>collapsed:: true</li></ul></li><li>Advanced query:<ul><li><em>Query: (and [[Project]] (task TODO))</em></li></ul></li></ul></li><li><h2>Nested Blocks</h2><ul><li>Parent block with <strong>parent</strong> tag<ul><li>First child block<ul><li>Nested child with <strong>Reference</strong><ul><li>Deep nesting level 3<ul><li>Even deeper level 4</li></ul></li></ul></li></ul></li><li>Second child with <mark>highlight</mark><ul><li><input type="checkbox" disabled /> Task in nested structure</li></ul></li></ul></li></ul></li><li><h2>Complex Combinations</h2><ul><li><input type="checkbox" disabled /> Review <strong>Documentation</strong> with <strong>urgent</strong> tag and <mark>important</mark> notes</li><li><input type="checkbox" checked disabled /> Completed task with <strong>bold text</strong> and <strong>Page Reference</strong></li><li>This combines <mark>highlighting</mark>, <strong>bold</strong>, <strong>tags</strong>, and <strong>links</strong> all together</li></ul></li><li><h2>Properties Example</h2>id:: 67460e8e-3f21-4a8e-9876-1234567890ab<br>tags:: test, example, features<br>created-at:: 2024-11-26<ul><li>This block has properties attached</li></ul></li><li><h2>Edge Cases</h2><ul><li>Empty nested block:<br>-</li><li>Block with only a tag:<ul><li><strong>standalone</strong></li></ul></li><li>Block with only a link:<ul><li><strong>OnlyLink</strong></li></ul></li><li>Block with only highlight:<ul><li><mark>OnlyHighlight</mark></li></ul></li></ul></li><li><h2>Real World Example</h2><ul><li><input type="checkbox" disabled /> Implement new feature for <strong>User Authentication</strong><ul><li><input type="checkbox" disabled /> 🔄Research authentication methods <strong>security</strong><ul><li>Review <strong>OAuth 2.0</strong> documentation</li><li>Check <mark>best practices</mark> for token storage</li></ul></li><li><input type="checkbox" disabled /> ⏳Write unit tests<ul><li><pre><code class="language-typescript">describe(&#039;Authentication&#039;, () =&gt; {<br>it(&#039;should validate tokens&#039;, () =&gt; {<br>// test code<br>});<br>});<br></code></pre></li></ul></li><li><input type="checkbox" disabled /> Update <strong>API Documentation</strong></li></ul></li><li><input type="checkbox" checked disabled /> Initial setup completed <strong>successfully</strong></li></ul></li><li><h2>Multiline Text</h2><ul><li>This is a block with multiple lines of text.<br>Each line continues the same block.<br>This tests how multiline content is handled.<br>The converter should preserve all lines properly.</li></ul></li><li><h2>Quotes</h2><ul><li>This block contains a quote: <br><blockquote>&quot;The best way to predict the future is to invent it.&quot; - Alan Kay</blockquote></li><li>Block with quote and text before and after: Some introduction text <br><blockquote>&quot;Innovation distinguishes between a leader and a follower.&quot; - Steve Jobs</blockquote><br>and some conclusion.</li><li><blockquote>&quot;The only way to do great work is to love what you do.&quot; - Steve Jobs</blockquote></li></ul></li></ul></li></ul>"`;
+
+exports[`Integration Tests > End-to-End Conversion > should convert test document to Markdown format 1`] = `
+"  - Root
+    - # Feature Test Document
+    - This document demonstrates all features supported by the Logseq Copy as Markdown/AsciiDoc plugin.
+    - ## Block References and Links
+      - This is a reference to **Another Page**
+      - Multiple references: **Page One** and **Page Two**
+      - Nested reference: See **Documentation/Setup Guide**
+    - ## Tags
+      - This block has a **important** tag
+      - Multiple tags: **urgent** **review** **documentation**
+      - Tags with special characters: **my-tag** **under_score**
+    - ## Task Markers
+      - - [ ] This is a todo item
+      - - [x] This task is completed
+      - - [ ] 🔄 Currently working on this
+      - - [ ] ⏳ This is for later
+      - - [ ] 🔥 High priority task
+    - ## Highlights
+      - This is <mark>very important text</mark> that should be highlighted!
+      - Multiple highlights: <mark>First highlight</mark> and <mark>second highlight</mark> in one line
+      - Combined with other formatting: <mark>Important</mark> **urgent** task
+    - ## Bold Text
+      - This is **bold text** for emphasis
+      - **Multiple** **bold** **words**
+      - Combined: **Bold** and <mark>highlighted</mark> text
+    - ## Code Blocks
+      - Inline code example \`run command\`.
+      - Code block with language:
+        \`\`\`javascript
+        function hello() {
+        console.log("Hello World");
+        }
+        \`\`\`
+      - Code block without language:
+        \`\`\`
+        Plain text code
+        Multiple lines
+        \`\`\`
+    - ## Queries
+      - Simple query example:
+        - Query: (todo TODO DOING)\\
+          collapsed:: true
+      - Advanced query:
+        - Query: (and [[Project]] (task TODO))
+    - ## Nested Blocks
+      - Parent block with **parent** tag
+        - First child block
+          - Nested child with **Reference**
+            - Deep nesting level 3
+              - Even deeper level 4
+        - Second child with <mark>highlight</mark>
+          - - [ ] Task in nested structure
+    - ## Complex Combinations
+      - - [ ] Review **Documentation** with **urgent** tag and <mark>important</mark> notes
+      - - [x] Completed task with **bold text** and **Page Reference**
+      - This combines <mark>highlighting</mark>, **bold**, **tags**, and **links** all together
+    - ## Properties Example\\
+      id:: 67460e8e-3f21-4a8e-9876-1234567890ab\\
+      tags:: test, example, features\\
+      created-at:: 2024-11-26
+      - This block has properties attached
+    - ## Edge Cases
+      - Empty nested block:\\
+        -
+      - Block with only a tag:
+        - **standalone**
+      - Block with only a link:
+        - **OnlyLink**
+      - Block with only highlight:
+        - <mark>OnlyHighlight</mark>
+    - ## Real World Example
+      - - [ ] Implement new feature for **User Authentication**
+        - - [ ] 🔄 Research authentication methods **security**
+          - Review **OAuth 2.0** documentation
+          - Check <mark>best practices</mark> for token storage
+        - - [ ] ⏳ Write unit tests
+          \`\`\`typescript
+          describe('Authentication', () => {
+          it('should validate tokens', () => {
+          // test code
+          });
+          });
+          \`\`\`
+        - - [ ] Update **API Documentation**
+      - - [x] Initial setup completed **successfully**
+    - ## Multiline Text
+      - This is a block with multiple lines of text.\\
+        Each line continues the same block.\\
+        This tests how multiline content is handled.\\
+        The converter should preserve all lines properly.
+    - ## Quotes
+      - This block contains a quote: 
+        > "The best way to predict the future is to invent it." - Alan Kay
+      - Block with quote and text before and after: Some introduction text 
+        > "Innovation distinguishes between a leader and a follower." - Steve Jobs
+        and some conclusion.
+      - > "The only way to do great work is to love what you do." - Steve Jobs"
+`;

@@ -1,0 +1,54 @@
+{
+  "name": "logseq-copy-as-markdown",
+  "version": "1.0.0",
+  "description": "Copy Logseq blocks as GitHub Markdown or AsciiDoc format",
+  "main": "dist/index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && pnpm run postbuild",
+    "postbuild": "cpy package.json dist && cpy logo.svg dist",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:unit": "vitest run --exclude src/integration.test.ts",
+    "test:integration": "vitest run src/integration.test.ts",
+    "test:all": "vitest run",
+    "test:run": "pnpm run test:all",
+    "generate-docs": "tsx generate-test-docs.ts",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "keywords": ["logseq", "plugin", "markdown", "asciidoc", "copy", "clipboard"],
+  "author": "Logseq Copy as Markdown Plugin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MathiasSonderfeld/logseq-copy-as-markdown.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MathiasSonderfeld/logseq-copy-as-markdown/issues"
+  },
+  "homepage": "https://github.com/MathiasSonderfeld/logseq-copy-as-markdown#readme",
+  "dependencies": {
+    "@logseq/libs": "^0.0.17",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.19.130",
+    "@types/react": "18.3.27",
+    "@types/react-dom": "18.3.7",
+    "@vitejs/plugin-react": "3.1.0",
+    "autoprefixer": "10.4.22",
+    "cpy-cli": "^5.0.0",
+    "postcss": "8.5.6",
+    "tailwindcss": "3.4.18",
+    "typescript": "4.9.5",
+    "vite": "4.5.14",
+    "vite-plugin-logseq": "1.1.2",
+    "vitest": "^4.0.14"
+  },
+  "logseq": {
+    "id": "logseq-copy-as-markdown",
+    "title": "Copy as Markdown/AsciiDoc",
+    "icon": "./logo.svg"
+  }
+}
