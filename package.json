@@ -1,6 +1,6 @@
 {
   "name": "logseq-copy-as-markdown",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Copy Logseq blocks as GitHub Markdown or AsciiDoc format",
   "main": "dist/index.html",
   "scripts": {
